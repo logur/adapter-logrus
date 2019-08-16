@@ -12,7 +12,7 @@ type Logger struct {
 }
 
 // New returns a new Logur logger.
-// If logger is nil, a default instance will be created.
+// If logger is nil, a default instance is created.
 func New(logger *logrus.Logger) *Logger {
 	if logger == nil {
 		return NewFromEntry(nil)
@@ -22,7 +22,7 @@ func New(logger *logrus.Logger) *Logger {
 }
 
 // NewFromEntry returns a new Logur logger from a Logrus entry.
-// If entry is nil, a default instance will be created.
+// If entry is nil, a default instance is created.
 func NewFromEntry(entry *logrus.Entry) *Logger {
 	if entry == nil {
 		entry = logrus.NewEntry(logrus.StandardLogger())
