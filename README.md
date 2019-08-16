@@ -22,7 +22,7 @@ go get logur.dev/adapter/logrus
 package main
 
 import (
-    "github.com/sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	logrusadapter "logur.dev/adapter/logrus"
 )
 
