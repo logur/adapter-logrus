@@ -1,5 +1,5 @@
-// Package template provides a Logur adapter for TEMPLATE.
-package template
+// Package logrus provides a Logur adapter for Logrus.
+package logrus
 
 import (
 	"github.com/goph/logur"

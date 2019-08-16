@@ -1,18 +1,18 @@
-# Template Logur Adapter
+# Logrus Logur Adapter
 
-[![Go Version](https://img.shields.io/badge/go%20version-%3E=1.11-orange.svg?style=flat-square)](https://github.com/logur/adapter-template)
-[![CircleCI](https://circleci.com/gh/logur/adapter-template.svg?style=svg)](https://circleci.com/gh/logur/adapter-template)
-[![Go Report Card](https://goreportcard.com/badge/logur.dev/adapter/template?style=flat-square)](https://goreportcard.com/report/logur.dev/adapter/template)
-[![GolangCI](https://golangci.com/badges/github.com/logur/adapter-template.svg)](https://golangci.com/r/github.com/logur/adapter-template)
-[![GoDoc](http://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square)](https://godoc.org/logur.dev/adapter/template)
+[![Go Version](https://img.shields.io/badge/go%20version-%3E=1.11-orange.svg?style=flat-square)](https://github.com/logur/adapter-logrus)
+[![CircleCI](https://circleci.com/gh/logur/adapter-logrus.svg?style=svg)](https://circleci.com/gh/logur/adapter-logrus)
+[![Go Report Card](https://goreportcard.com/badge/logur.dev/adapter/logrus?style=flat-square)](https://goreportcard.com/report/logur.dev/adapter/logrus)
+[![GolangCI](https://golangci.com/badges/github.com/logur/adapter-logrus.svg)](https://golangci.com/r/github.com/logur/adapter-logrus)
+[![GoDoc](http://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square)](https://godoc.org/logur.dev/adapter/logrus)
 
-**Logur logger adapter for TEMPLATE.**
+**Logur logger adapter for [Logrus](https://github.com/sirupsen/logrus).**
 
 
 ## Installation
 
 ```bash
-go get logur.dev/adapter/template
+go get logur.dev/adapter/logrus
 ```
 
 
@@ -22,11 +22,12 @@ go get logur.dev/adapter/template
 package main
 
 import (
-	templateadapter "logur.dev/adapter/template"
+    "github.com/sirupsen/logrus"
+	logrusadapter "logur.dev/adapter/logrus"
 )
 
 func main() {
-	logger := templateadapter.New(/*logger*/)
+	logger := logrusadapter.New(logrus.New())
 }
 ```
 

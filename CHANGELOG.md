@@ -10,4 +10,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 
-[Unreleased]: https://github.com/logur/adapter-template/compare/v0.0.0...HEAD
+[Unreleased]: https://github.com/logur/adapter-logrus/compare/v0.0.0...HEAD

@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Test" type="GoTestRunConfiguration" factoryName="Go Test">
-    <module name="adapter-template" />
+    <module name="adapter-logrus" />
     <working_directory value="$PROJECT_DIR$/" />
     <go_parameters value="-i" />
     <EXTENSION ID="net.ashald.envfile">

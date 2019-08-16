@@ -1,4 +1,4 @@
-module logur.dev/adapter/template
+module logur.dev/adapter/logrus
 
 go 1.12
 
