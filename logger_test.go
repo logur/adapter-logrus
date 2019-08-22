@@ -6,8 +6,8 @@ import (
 	"github.com/sirupsen/logrus"
 	logrustest "github.com/sirupsen/logrus/hooks/test"
 
-	"github.com/goph/logur"
-	"github.com/goph/logur/logtesting"
+	"logur.dev/logur"
+	"logur.dev/logur/logtesting"
 )
 
 // nolint: gochecknoglobals

@@ -2,8 +2,8 @@
 package logrus
 
 import (
-	"github.com/goph/logur"
 	"github.com/sirupsen/logrus"
+	"logur.dev/logur"
 )
 
 // Logger is a Logur adapter for Logrus.
