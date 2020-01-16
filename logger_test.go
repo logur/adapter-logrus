@@ -5,9 +5,9 @@ import (
 
 	"github.com/sirupsen/logrus"
 	logrustest "github.com/sirupsen/logrus/hooks/test"
+	"logur.dev/logur/conformance"
 
 	"logur.dev/logur"
-	"logur.dev/logur/logtesting"
 )
 
 // nolint: gochecknoglobals
@@ -19,13 +19,13 @@ var levelMap = map[logur.Level]logrus.Level{
 	logur.Error: logrus.ErrorLevel,
 }
 
-func newTestSuite() *logtesting.LoggerTestSuite {
-	return &logtesting.LoggerTestSuite{
-		LoggerFactory: func(level logur.Level) (logur.Logger, func() []logur.LogEvent) {
+func TestLogger(t *testing.T) {
+	suite := conformance.TestSuite{
+		LoggerFactory: func(level logur.Level) (logur.Logger, conformance.TestLogger) {
 			logrusLogger, hook := logrustest.NewNullLogger()
 			logrusLogger.SetLevel(levelMap[level])
 
-			return New(logrusLogger), func() []logur.LogEvent {
+			return New(logrusLogger), conformance.TestLoggerFunc(func() []logur.LogEvent {
 				entries := hook.AllEntries()
 
 				events := make([]logur.LogEvent, len(entries))
@@ -41,11 +41,9 @@ func newTestSuite() *logtesting.LoggerTestSuite {
 				}
 
 				return events
-			}
+			})
 		},
 	}
-}
 
-func TestLoggerSuite(t *testing.T) {
-	newTestSuite().Execute(t)
+	suite.Run(t)
 }
